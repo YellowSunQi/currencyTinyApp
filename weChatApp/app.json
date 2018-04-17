@@ -1,6 +1,7 @@
 {
   "pages":[
-    "pages/exchangeRate/exchangeRate"
+    "pages/exchangeRate/exchangeRate",
+    "pages/searchPage/searchPage"
   ],
   "window":{
     "backgroundTextStyle":"light",
