@@ -1,0 +1,18 @@
+<view>
+  <input placeholder='搜索' bindinput='inputSearchData'></input><button bindtap='searchData'>搜索</button>
+  <input placeholder="请输入需要换算的金额" type="digit" bindinput='setInputData'></input>
+  <picker range="{{curDict}}" bindchange="curSourceChange" value="{{curSourceIndex}}" range-key="curName">
+    <view>
+      {{curDict[curSourceIndex].curName}}({{curDict[curSourceIndex].curShortName}})
+    </view>
+  </picker>
+  <view>{{resultData}}</view>
+  <picker range="{{curDict}}" bindchange="curTargetChange" value="{{curTargetIndex}}" range-key="curName">
+    <view>
+      {{curDict[curTargetIndex].curName}}({{curDict[curTargetIndex].curShortName}})
+    </view>
+  </picker>
+  <view>最新汇率更新时间：{{update}}</view>
+  <button bindtap='calculateRate' bindlongpress='clearStorage'>点击计算</button>
+  <button bindtap='exchangeSourceAndTarget'>交换</button>
+</view>
